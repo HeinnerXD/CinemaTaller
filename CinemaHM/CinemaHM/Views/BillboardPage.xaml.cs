@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Net.Http;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,24 +20,29 @@ namespace CinemaHM.Views
             LoadMovies();
         }
 
-        private void LoadMovies()
+        private async void LoadMovies()
         {
-            //var webImage = new Image { Source = ImageSource.FromUri(new Uri("https://misapis.azurewebsites.net/Content/Images/venom.jpg")) };
-            var moviesList = new List<Movie>
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://misapis.azurewebsites.net");
+
+            var request = await client.GetAsync("/api/Cartelera");
+            if (request.IsSuccessStatusCode)
             {
-                new Movie { Nombre = "Venom", FechaEstreno="Hoy", Genero = "Todos", Imagen="https://misapis.azurewebsites.net/Content/Images/venom.jpg", Recomendacion="Mayores de 7 años"},
-                
-            };
+                var responseJson = request.Content.ReadAsStringAsync().Result;
+                var response = JsonConvert.DeserializeObject<List<Movie>>(responseJson);
 
-
-
-            lsMovies.ItemsSource = moviesList;
+                lsMovies.ItemsSource = response;
+            }
+            else
+            {
+                await DisplayAlert("UPS!", "Ha ocurrido un error, intentalo mas tarde", "OK");
+            }
         }
 
         private async void MovieSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var contactSelected = (Movie)e.SelectedItem;
-            //await Navigation.PushAsync(new FunctionsPage(MovieSelected));
+            var MovieSelected = (Movie)e.SelectedItem;
+            await Navigation.PushAsync(new FunctionsPage(MovieSelected));
         }
     }
 }

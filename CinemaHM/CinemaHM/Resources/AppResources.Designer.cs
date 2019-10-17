@@ -61,6 +61,42 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Tickets.
+        /// </summary>
+        internal static string Boletas {
+            get {
+                return ResourceManager.GetString("Boletas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Quantity.
+        /// </summary>
+        internal static string Cantidad {
+            get {
+                return ResourceManager.GetString("Cantidad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cinema.
+        /// </summary>
+        internal static string Cinema {
+            get {
+                return ResourceManager.GetString("Cinema", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a City.
+        /// </summary>
+        internal static string Ciudad {
+            get {
+                return ResourceManager.GetString("Ciudad", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Password.
         /// </summary>
         internal static string Contraseña {
@@ -70,11 +106,110 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Date.
+        /// </summary>
+        internal static string Fecha {
+            get {
+                return ResourceManager.GetString("Fecha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Premiere.
+        /// </summary>
+        internal static string FechaEstreno {
+            get {
+                return ResourceManager.GetString("FechaEstreno", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Function.
+        /// </summary>
+        internal static string Funcion {
+            get {
+                return ResourceManager.GetString("Funcion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gender.
+        /// </summary>
+        internal static string Genero {
+            get {
+                return ResourceManager.GetString("Genero", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Log In.
         /// </summary>
         internal static string Ingresar {
             get {
                 return ResourceManager.GetString("Ingresar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Buy Now.
+        /// </summary>
+        internal static string Pagar {
+            get {
+                return ResourceManager.GetString("Pagar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Movie.
+        /// </summary>
+        internal static string Pelicula {
+            get {
+                return ResourceManager.GetString("Pelicula", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Price.
+        /// </summary>
+        internal static string Precio {
+            get {
+                return ResourceManager.GetString("Precio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Recommendation.
+        /// </summary>
+        internal static string Recomendacion {
+            get {
+                return ResourceManager.GetString("Recomendacion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Room.
+        /// </summary>
+        internal static string Sala {
+            get {
+                return ResourceManager.GetString("Sala", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Title.
+        /// </summary>
+        internal static string Titulo {
+            get {
+                return ResourceManager.GetString("Titulo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Total To Pay.
+        /// </summary>
+        internal static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
             }
         }
         

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using CinemaHM.Helpers;
-using CinemaHM.Domain;
 
 namespace CinemaHM.Services
 {
-    public static class MoviesService
+    class Response
     {
+        public bool EsPermitido { get; set; }
+        public string Mensaje { get; set; }
     }
+
 }

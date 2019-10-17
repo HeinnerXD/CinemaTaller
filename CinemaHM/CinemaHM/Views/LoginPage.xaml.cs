@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Net.Http;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CinemaHM.Services;
 
 namespace CinemaHM.Views
 {
@@ -17,28 +19,53 @@ namespace CinemaHM.Views
             InitializeComponent();
         }
 
-        private void Ingresar_Clicked(object sender, EventArgs e)
+        private async void Ingresar_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtUsuario.Text))
+            var user = txtUsuario.Text;
+            var password = txtPassword.Text;
+
+            if (string.IsNullOrEmpty(user))
             {
-                DisplayAlert("Validacion", "El nombre de usuario es requerido", "OK");
+                await DisplayAlert("Validacion", "El nombre de usuario es requerido", "OK");
                 txtUsuario.Focus();
                 return;
             }
-            else if (string.IsNullOrEmpty(txtPassword.Text))
+            if (string.IsNullOrEmpty(password))
             {
-                DisplayAlert("Validacion", "La contraseña es requerida", "OK");
+                await DisplayAlert("Validacion", "La contraseña es requerida", "OK");
                 txtPassword.Focus();
                 return;
             }
-            else if (txtUsuario.Text == "Admin" && txtPassword.Text == "CinemaAdmin")
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://misapis.azurewebsites.net");
+
+            var authentication = new AuthenticationService
             {
-                Navigation.PushAsync(new BillboardPage());
+                Usuario = user,
+                Password = password
+            };
+
+            string json = JsonConvert.SerializeObject(authentication);
+            StringContent content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var request = await client.PostAsync("/api/Seguridad", content);
+            if (request.IsSuccessStatusCode)
+            {
+                var responseJson = request.Content.ReadAsStringAsync().Result;
+                var response = JsonConvert.DeserializeObject<Response>(responseJson);
+
+                if (response.EsPermitido)
+                {
+                    await Navigation.PushAsync(new BillboardPage());
+                }
+                else
+                {
+                    await DisplayAlert("Invalido", response.Mensaje, "OK");
+                }
             }
             else
             {
-                DisplayAlert("Validacion", "Credenciales Incorrectas", "OK");
-                return;
+                await DisplayAlert("UPS!", "Ha ocurrido un error, intentalo mas tarde", "OK");
             }
         }
     }

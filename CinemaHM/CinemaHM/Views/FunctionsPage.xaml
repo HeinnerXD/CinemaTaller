@@ -4,12 +4,40 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="CinemaHM.Views.FunctionsPage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+             x:Class="CinemaHM.Views.FunctionsPage"
+             Title= "Funciones"
+             xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
+
+    <StackLayout Orientation="Vertical">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{il8n:Translate Titulo}"></Label>
+            <Label Text="{Binding Nombre}"></Label>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{il8n:Translate Fecha}"></Label>
+            <Label Text="{Binding FechaActual}"></Label>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{il8n:Translate Boletas}"></Label>
+            <Entry x:Name="Boletas" Keyboard="Numeric"/>
+        </StackLayout>
+        <ListView ItemsSource="{Binding Funciones}" ItemSelected="FunctionSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Cinema}"></Label>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding Sala}"></Label>
+                                <Label Text=" - "/>
+                                <Label Text="{Binding Ciudad}"></Label>
+                            </StackLayout>
+                            <Label Text="{Binding Precio}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>

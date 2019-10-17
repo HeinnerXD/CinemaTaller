@@ -5,11 +5,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CinemaHM.Views.BillboardPage"
-             Title="Cartelera">
-    <ListView x:Name="lsMovies" ItemSelected="MovieSelected">
+             Title="Cartelera"
+             xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
+
+    <ListView x:Name="lsMovies" HasUnevenRows="True" ItemSelected="MovieSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <ImageCell Text="{Binding Nombre}" Detail="{Binding Recomendacion}" ImageSource="{Binding Imagen}" />
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Margin="15">
+                        <Image Source="{Binding Imagen}" WidthRequest="100" Aspect="Fill" />
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Nombre}"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{il8n:Translate FechaEstreno}"></Label>
+                                <Label Text="{Binding FechaEstreno}"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{il8n:Translate Genero}"></Label>
+                                <Label Text="{Binding Genero}"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Recomendacion}"></Label>
+                                <Label Text="{Binding Duracion}"></Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

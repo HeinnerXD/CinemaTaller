@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CinemaHM.Views.ResumePage"
+             Title="Resumen Compra"
+             xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
+    <StackLayout Orientation="Vertical">
+        <Grid  x:Name="MovieGrid">
+            <Image Source="{Binding Imagen}" WidthRequest="100" Aspect="Fill" Grid.ColumnSpan="2" />
+            <Label Text="{il8n:Translate Pelicula}" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="{il8n:Translate Titulo}" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="{Binding Nombre}" Grid.Column="1" Grid.Row="2"/>
+            <Label Text="{il8n:Translate Fecha}" Grid.Column="0" Grid.Row="3"/>
+            <Label Text="{Binding FechaActual}" Grid.Column="1" Grid.Row="3"/>
+        </Grid>
+        <Grid x:Name="FunctionGrid">
+            <Label HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{il8n:Translate Funcion}" Grid.Column="0" Grid.Row="0"/>
+            <Label Text="{il8n:Translate Cinema}" Grid.Column="0" Grid.Row="1"/>
+            <Label Text="{Binding Cinema}" Grid.Column="1" Grid.Row="1"/>
+            <Label Text="{il8n:Translate Sala}" Grid.Column="0" Grid.Row="2"/>
+            <Label Text="{Binding Sala}" Grid.Column="1" Grid.Row="2"/>
+            <Label Text="{il8n:Translate Ciudad}" Grid.Column="0" Grid.Row="3"/>
+            <Label Text="{Binding Ciudad}" Grid.Column="1" Grid.Row="3"/>
+            <Label HorizontalOptions="CenterAndExpand" TextColor="Black" Text="{il8n:Translate Boletas}" Grid.Column="0" Grid.Row="4"/>
+            <Label Text="{il8n:Translate Precio}" Grid.Column="0" Grid.Row="5"/>
+            <Label Text="{Binding Precio}" Grid.Column="1" Grid.Row="5"/>
+            <Label Text="{il8n:Translate Cantidad}" Grid.Column="0" Grid.Row="6"/>
+            <Label x:Name="Quantity" Grid.Column="1" Grid.Row="6"/>
+            <Label Text="{il8n:Translate Total}" Grid.Column="0" Grid.Row="7"/>
+            <Label x:Name="TotalPay" Grid.Column="1" Grid.Row="7"/>
+            <Button Text="{il8n:Translate Pagar}" Grid.ColumnSpan="2" Grid.Row="8" Clicked="PayClicked"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
