@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CinemaHM.Views.LoginPage"
+             xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
+    <StackLayout Orientation="Vertical" Margin="50" Spacing="20">
+        <Image Source="login.png"/>
+        <Entry x:Name="txtUsuario" Placeholder="{il8n:Translate Usuario}"/>
+        <Entry x:Name="txtPassword" Placeholder="{il8n:Translate Contraseña}" IsPassword="True"/>
+        <Button BorderWidth="80" Text="{il8n:Translate Ingresar}" VerticalOptions="EndAndExpand" CornerRadius="10" 
+                Clicked="Ingresar_Clicked"/>
+    </StackLayout>
+</ContentPage>
