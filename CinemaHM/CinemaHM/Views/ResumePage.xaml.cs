@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CinemaHM.Domain;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CinemaHM.Resources;
 
 namespace CinemaHM.Views
 {
@@ -23,7 +24,7 @@ namespace CinemaHM.Views
 
         private async void PayClicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Excelente", "La reserva se ha concretado", "OK");
+            await DisplayAlert(AppResources.Excelente, AppResources.ReservaHecha, "OK");
             await Navigation.PushAsync(new BillboardPage());
         }
     }

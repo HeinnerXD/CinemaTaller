@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CinemaHM.Domain;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CinemaHM.Resources;
 
 namespace CinemaHM.Views
 {
@@ -25,7 +26,7 @@ namespace CinemaHM.Views
             string quantity = Boletas.Text;
             if (string.IsNullOrEmpty(quantity))
             {
-                await DisplayAlert("Validación", "Debe ingresar el numero de boletas", "OK");
+                await DisplayAlert(AppResources.Validacion, AppResources.IngresarBoletas, "OK");
                 return;
             }
             int quan = Convert.ToInt32(quantity);

@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CinemaHM.Views.ResumePage"
-             Title="Resumen Compra"
+             Title="{il8n:Translate Resumen}"
              xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
     <StackLayout Orientation="Vertical">
         <Grid  x:Name="MovieGrid">

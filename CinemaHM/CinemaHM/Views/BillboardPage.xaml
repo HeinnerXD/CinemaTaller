@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CinemaHM.Views.BillboardPage"
-             Title="Cartelera"
+             Title="{il8n:Translate Cartelera}"
              xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
 
     <ListView x:Name="lsMovies" HasUnevenRows="True" ItemSelected="MovieSelected">
@@ -15,7 +15,7 @@
                     <StackLayout Orientation="Horizontal" Margin="15">
                         <Image Source="{Binding Imagen}" WidthRequest="100" Aspect="Fill" />
                         <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Nombre}"></Label>
+                            <Label FontSize="20" TextColor="Black" Text="{Binding Nombre}"></Label>
                             <StackLayout Orientation="Horizontal">
                                 <Label Text="{il8n:Translate FechaEstreno}"></Label>
                                 <Label Text="{Binding FechaEstreno}"></Label>
@@ -25,8 +25,13 @@
                                 <Label Text="{Binding Genero}"></Label>
                             </StackLayout>
                             <StackLayout Orientation="Horizontal">
+                                <Label Text="{il8n:Translate Recomendacion}"></Label>
                                 <Label Text="{Binding Recomendacion}"></Label>
+                            </StackLayout>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{il8n:Translate Duracion}"></Label>
                                 <Label Text="{Binding Duracion}"></Label>
+                                <Label Text="min"></Label>
                             </StackLayout>
                         </StackLayout>
                     </StackLayout>

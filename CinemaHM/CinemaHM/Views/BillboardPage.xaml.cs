@@ -8,6 +8,7 @@ using System.Net.Http;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using CinemaHM.Resources;
 
 namespace CinemaHM.Views
 {
@@ -35,7 +36,7 @@ namespace CinemaHM.Views
             }
             else
             {
-                await DisplayAlert("UPS!", "Ha ocurrido un error, intentalo mas tarde", "OK");
+                await DisplayAlert("UPS!", AppResources.ErrorCometido, "OK");
             }
         }
 

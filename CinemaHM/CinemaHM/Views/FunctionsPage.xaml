@@ -5,13 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="CinemaHM.Views.FunctionsPage"
-             Title= "Funciones"
+             Title= "{il8n:Translate Funciones}"
              xmlns:il8n ="clr-namespace:CinemaHM.Helpers">
 
     <StackLayout Orientation="Vertical">
         <StackLayout Orientation="Horizontal">
-            <Label Text="{il8n:Translate Titulo}"></Label>
-            <Label Text="{Binding Nombre}"></Label>
+            <Label FontSize="20" TextColor="Black" Text="{il8n:Translate Titulo}"></Label>
+            <Label FontSize="20" TextColor="Black" Text="{Binding Nombre}"></Label>
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Label Text="{il8n:Translate Fecha}"></Label>
@@ -19,7 +19,7 @@
         </StackLayout>
         <StackLayout Orientation="Horizontal">
             <Label Text="{il8n:Translate Boletas}"></Label>
-            <Entry x:Name="Boletas" Keyboard="Numeric"/>
+            <Entry AnchorX="80" x:Name="Boletas" Keyboard="Numeric"/>
         </StackLayout>
         <ListView ItemsSource="{Binding Funciones}" ItemSelected="FunctionSelected">
             <ListView.ItemTemplate>
@@ -33,7 +33,12 @@
                                 <Label Text=" - "/>
                                 <Label Text="{Binding Ciudad}"></Label>
                             </StackLayout>
-                            <Label Text="{Binding Precio}"></Label>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{il8n:Translate Precio}"></Label>
+                                <Label Text="$"></Label>
+                                <Label Text="{Binding Precio}"></Label>
+                                <Label Text=" COP"></Label>
+                            </StackLayout>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

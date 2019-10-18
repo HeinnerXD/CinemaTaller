@@ -70,7 +70,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Quantity.
+        ///   Busca una cadena traducida similar a Quantity: .
         /// </summary>
         internal static string Cantidad {
             get {
@@ -79,7 +79,16 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Cinema.
+        ///   Busca una cadena traducida similar a Billboard.
+        /// </summary>
+        internal static string Cartelera {
+            get {
+                return ResourceManager.GetString("Cartelera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cinema: .
         /// </summary>
         internal static string Cinema {
             get {
@@ -88,7 +97,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a City.
+        ///   Busca una cadena traducida similar a City: .
         /// </summary>
         internal static string Ciudad {
             get {
@@ -106,7 +115,43 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Date.
+        ///   Busca una cadena traducida similar a Password required.
+        /// </summary>
+        internal static string ContraseñaRequerida {
+            get {
+                return ResourceManager.GetString("ContraseñaRequerida", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Duration: .
+        /// </summary>
+        internal static string Duracion {
+            get {
+                return ResourceManager.GetString("Duracion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Error, please try again later.
+        /// </summary>
+        internal static string ErrorCometido {
+            get {
+                return ResourceManager.GetString("ErrorCometido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Excelent.
+        /// </summary>
+        internal static string Excelente {
+            get {
+                return ResourceManager.GetString("Excelente", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Date: .
         /// </summary>
         internal static string Fecha {
             get {
@@ -115,7 +160,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Premiere.
+        ///   Busca una cadena traducida similar a Premiere: .
         /// </summary>
         internal static string FechaEstreno {
             get {
@@ -133,7 +178,16 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Gender.
+        ///   Busca una cadena traducida similar a Functions.
+        /// </summary>
+        internal static string Funciones {
+            get {
+                return ResourceManager.GetString("Funciones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Gender: .
         /// </summary>
         internal static string Genero {
             get {
@@ -151,6 +205,24 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a You must enter the number of tickets.
+        /// </summary>
+        internal static string IngresarBoletas {
+            get {
+                return ResourceManager.GetString("IngresarBoletas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Invalid.
+        /// </summary>
+        internal static string Invalido {
+            get {
+                return ResourceManager.GetString("Invalido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Buy Now.
         /// </summary>
         internal static string Pagar {
@@ -160,7 +232,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Movie.
+        ///   Busca una cadena traducida similar a Movie: .
         /// </summary>
         internal static string Pelicula {
             get {
@@ -169,7 +241,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Price.
+        ///   Busca una cadena traducida similar a Price: .
         /// </summary>
         internal static string Precio {
             get {
@@ -178,7 +250,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Recommendation.
+        ///   Busca una cadena traducida similar a Recommendation: .
         /// </summary>
         internal static string Recomendacion {
             get {
@@ -187,7 +259,25 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Room.
+        ///   Busca una cadena traducida similar a The reservation has been completed.
+        /// </summary>
+        internal static string ReservaHecha {
+            get {
+                return ResourceManager.GetString("ReservaHecha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Summary.
+        /// </summary>
+        internal static string Resumen {
+            get {
+                return ResourceManager.GetString("Resumen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Room: .
         /// </summary>
         internal static string Sala {
             get {
@@ -196,7 +286,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Title.
+        ///   Busca una cadena traducida similar a Title: .
         /// </summary>
         internal static string Titulo {
             get {
@@ -205,7 +295,7 @@ namespace CinemaHM.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Total To Pay.
+        ///   Busca una cadena traducida similar a Total To Pay: .
         /// </summary>
         internal static string Total {
             get {
@@ -219,6 +309,24 @@ namespace CinemaHM.Resources {
         internal static string Usuario {
             get {
                 return ResourceManager.GetString("Usuario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a User required.
+        /// </summary>
+        internal static string UsuarioRequerido {
+            get {
+                return ResourceManager.GetString("UsuarioRequerido", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Validation.
+        /// </summary>
+        internal static string Validacion {
+            get {
+                return ResourceManager.GetString("Validacion", resourceCulture);
             }
         }
     }

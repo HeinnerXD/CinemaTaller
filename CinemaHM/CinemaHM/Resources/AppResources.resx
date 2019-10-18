@@ -121,54 +121,90 @@
     <value>Tickets</value>
   </data>
   <data name="Cantidad" xml:space="preserve">
-    <value>Quantity</value>
+    <value>Quantity: </value>
+  </data>
+  <data name="Cartelera" xml:space="preserve">
+    <value>Billboard</value>
   </data>
   <data name="Cinema" xml:space="preserve">
-    <value>Cinema</value>
+    <value>Cinema: </value>
   </data>
   <data name="Ciudad" xml:space="preserve">
-    <value>City</value>
+    <value>City: </value>
   </data>
   <data name="Contraseña" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="ContraseñaRequerida" xml:space="preserve">
+    <value>Password required</value>
+  </data>
+  <data name="Duracion" xml:space="preserve">
+    <value>Duration: </value>
+  </data>
+  <data name="ErrorCometido" xml:space="preserve">
+    <value>Error, please try again later</value>
+  </data>
+  <data name="Excelente" xml:space="preserve">
+    <value>Excelent</value>
+  </data>
   <data name="Fecha" xml:space="preserve">
-    <value>Date</value>
+    <value>Date: </value>
   </data>
   <data name="FechaEstreno" xml:space="preserve">
-    <value>Premiere</value>
+    <value>Premiere: </value>
   </data>
   <data name="Funcion" xml:space="preserve">
     <value>Function</value>
   </data>
+  <data name="Funciones" xml:space="preserve">
+    <value>Functions</value>
+  </data>
   <data name="Genero" xml:space="preserve">
-    <value>Gender</value>
+    <value>Gender: </value>
   </data>
   <data name="Ingresar" xml:space="preserve">
     <value>Log In</value>
+  </data>
+  <data name="IngresarBoletas" xml:space="preserve">
+    <value>You must enter the number of tickets</value>
+  </data>
+  <data name="Invalido" xml:space="preserve">
+    <value>Invalid</value>
   </data>
   <data name="Pagar" xml:space="preserve">
     <value>Buy Now</value>
   </data>
   <data name="Pelicula" xml:space="preserve">
-    <value>Movie</value>
+    <value>Movie: </value>
   </data>
   <data name="Precio" xml:space="preserve">
-    <value>Price</value>
+    <value>Price: </value>
   </data>
   <data name="Recomendacion" xml:space="preserve">
-    <value>Recommendation</value>
+    <value>Recommendation: </value>
+  </data>
+  <data name="ReservaHecha" xml:space="preserve">
+    <value>The reservation has been completed</value>
+  </data>
+  <data name="Resumen" xml:space="preserve">
+    <value>Summary</value>
   </data>
   <data name="Sala" xml:space="preserve">
-    <value>Room</value>
+    <value>Room: </value>
   </data>
   <data name="Titulo" xml:space="preserve">
-    <value>Title</value>
+    <value>Title: </value>
   </data>
   <data name="Total" xml:space="preserve">
-    <value>Total To Pay</value>
+    <value>Total To Pay: </value>
   </data>
   <data name="Usuario" xml:space="preserve">
     <value>User Name</value>
+  </data>
+  <data name="UsuarioRequerido" xml:space="preserve">
+    <value>User required</value>
+  </data>
+  <data name="Validacion" xml:space="preserve">
+    <value>Validation</value>
   </data>
 </root>

@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using CinemaHM.Services;
+using CinemaHM.Resources;
 
 namespace CinemaHM.Views
 {
@@ -26,13 +27,13 @@ namespace CinemaHM.Views
 
             if (string.IsNullOrEmpty(user))
             {
-                await DisplayAlert("Validacion", "El nombre de usuario es requerido", "OK");
+                await DisplayAlert(AppResources.Validacion, AppResources.UsuarioRequerido, "OK");
                 txtUsuario.Focus();
                 return;
             }
             if (string.IsNullOrEmpty(password))
             {
-                await DisplayAlert("Validacion", "La contraseña es requerida", "OK");
+                await DisplayAlert(AppResources.Validacion, AppResources.ContraseñaRequerida, "OK");
                 txtPassword.Focus();
                 return;
             }
@@ -60,12 +61,12 @@ namespace CinemaHM.Views
                 }
                 else
                 {
-                    await DisplayAlert("Invalido", response.Mensaje, "OK");
+                    await DisplayAlert(AppResources.Invalido, response.Mensaje, "OK");
                 }
             }
             else
             {
-                await DisplayAlert("UPS!", "Ha ocurrido un error, intentalo mas tarde", "OK");
+                await DisplayAlert("UPS!", AppResources.ErrorCometido, "OK");
             }
         }
     }

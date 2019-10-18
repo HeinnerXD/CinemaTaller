@@ -123,52 +123,85 @@
   <data name="Cantidad" xml:space="preserve">
     <value>Cantidad</value>
   </data>
+  <data name="Cartelera" xml:space="preserve">
+    <value>Cartelera</value>
+  </data>
   <data name="Cinema" xml:space="preserve">
-    <value>Cinema</value>
+    <value>Cinema:</value>
   </data>
   <data name="Ciudad" xml:space="preserve">
-    <value>Ciudad</value>
+    <value>Ciudad:</value>
   </data>
   <data name="Contraseña" xml:space="preserve">
     <value>Contraseña</value>
   </data>
+  <data name="ContraseñaRequerida" xml:space="preserve">
+    <value>La contraseña es requerida</value>
+  </data>
+  <data name="ErrorCometido" xml:space="preserve">
+    <value>Ha ocurrido un error, intentalo mas tarde</value>
+  </data>
+  <data name="Excelente" xml:space="preserve">
+    <value>Excelente</value>
+  </data>
   <data name="Fecha" xml:space="preserve">
-    <value>Fecha</value>
+    <value>Fecha:</value>
   </data>
   <data name="FechaEstreno" xml:space="preserve">
-    <value>Estreno</value>
+    <value>Estreno:</value>
   </data>
   <data name="Funcion" xml:space="preserve">
     <value>Funcion</value>
   </data>
+  <data name="Funciones" xml:space="preserve">
+    <value>Funciones</value>
+  </data>
   <data name="Genero" xml:space="preserve">
-    <value>Genero</value>
+    <value>Genero:</value>
   </data>
   <data name="Ingresar" xml:space="preserve">
     <value>Ingresar</value>
+  </data>
+  <data name="IngresarBoletas" xml:space="preserve">
+    <value>Debe ingresar el numero de boletas</value>
+  </data>
+  <data name="Invalido" xml:space="preserve">
+    <value>Invalido</value>
   </data>
   <data name="Pagar" xml:space="preserve">
     <value>Pagar Ahora</value>
   </data>
   <data name="Pelicula" xml:space="preserve">
-    <value>Pelicula</value>
+    <value>Pelicula:</value>
   </data>
   <data name="Precio" xml:space="preserve">
-    <value>Precio</value>
+    <value>Precio: </value>
   </data>
   <data name="Recomendacion" xml:space="preserve">
-    <value>Recomendacion</value>
+    <value>Recomendacion: </value>
+  </data>
+  <data name="ReservaHecha" xml:space="preserve">
+    <value>La reserva se ha concretado</value>
+  </data>
+  <data name="Resumen" xml:space="preserve">
+    <value>Resumen</value>
   </data>
   <data name="Sala" xml:space="preserve">
-    <value>Sala</value>
+    <value>Sala: </value>
   </data>
   <data name="Titulo" xml:space="preserve">
-    <value>Titulo</value>
+    <value>Titulo: </value>
   </data>
   <data name="Total" xml:space="preserve">
     <value>Total a Pagar</value>
   </data>
   <data name="Usuario" xml:space="preserve">
     <value>Usuario</value>
+  </data>
+  <data name="UsuarioRequerido" xml:space="preserve">
+    <value>El nombre de usuario es requerido</value>
+  </data>
+  <data name="Validacion" xml:space="preserve">
+    <value>Validacion</value>
   </data>
 </root>
